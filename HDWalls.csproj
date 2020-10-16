@@ -1,0 +1,311 @@
+﻿<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props" Condition="Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{BE62B110-A1AF-4A65-9834-730929D6645E}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>HDWalls</RootNamespace>
+    <AssemblyName>HDWalls</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.3.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="URLRewriter, Version=1.0.2628.32113, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>bin\URLRewriter.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="Root.Master" />
+    <Content Include="Sitemap.aspx" />
+    <Content Include="Styles\Font\fontawesome-webfont.eot" />
+    <Content Include="Styles\Font\fontawesome-webfont.ttf" />
+    <Content Include="Styles\Font\fontawesome-webfont.woff" />
+    <Content Include="Styles\Font\fontawesome-webfont.woff2" />
+    <Content Include="Styles\Font\FontAwesome.otf" />
+    <Content Include="Styles\Font\glyphicons-halflings-regular.eot" />
+    <Content Include="Styles\Font\glyphicons-halflings-regular.ttf" />
+    <Content Include="Styles\Font\glyphicons-halflings-regular.woff" />
+    <Content Include="Styles\Font\HelveticaNeue-Bd.eo" />
+    <Content Include="Styles\Font\HelveticaNeue-Bd.eot" />
+    <Content Include="Styles\Font\HelveticaNeue-Bd.ttf" />
+    <Content Include="Styles\Font\HelveticaNeue-Bd.woff" />
+    <Content Include="Styles\Font\HelveticaNeue-Reg.eot" />
+    <Content Include="Styles\Font\HelveticaNeue-Reg.ttf" />
+    <Content Include="Styles\Font\HelveticaNeue-Reg.woff" />
+    <Content Include="Styles\Font\Myriad-Pro-Bold.eot" />
+    <Content Include="Styles\Font\Myriad-Pro-Bold.ttf" />
+    <Content Include="Styles\Font\Myriad-Pro-Bold.woff" />
+    <Content Include="Styles\Font\Myriad-Pro.woff" />
+    <Content Include="Styles\Font\MYRIADPROREGULAR.eot" />
+    <Content Include="Styles\Font\MYRIADPROREGULAR.ttf" />
+    <Content Include="Styles\Font\MYRIADPROREGULAR.woff" />
+    <Content Include="Styles\Font\nassim-bold.eot" />
+    <Content Include="Styles\Font\nassim-bold.ttf" />
+    <Content Include="Styles\Font\nassim-bold.woff" />
+    <Content Include="Styles\Font\nassim-regular.eot" />
+    <Content Include="Styles\Font\nassim-regular.ttf" />
+    <Content Include="Styles\Font\nassim-regular.woff" />
+    <Content Include="Styles\Font\webfonts\geo-medium\eot\1110FC_0.eot" />
+    <Content Include="Styles\Font\webfonts\geo-medium\ttf\1110FC_0.ttf" />
+    <Content Include="Styles\Font\webfonts\geo-medium\woff\1110FC_0.woff" />
+    <Content Include="Styles\Font\webfonts\geo-regular\eot\11014B_0.eot" />
+    <Content Include="Styles\Font\webfonts\geo-regular\ttf\11014B_0.ttf" />
+    <Content Include="Styles\Font\webfonts\geo-regular\woff\11014B_0.woff" />
+    <Content Include="Styles\Font\webfonts\geo-semibold\eot\style_169898.eot" />
+    <Content Include="Styles\Font\webfonts\geo-semibold\ttf\style_169898.ttf" />
+    <Content Include="Styles\Font\webfonts\geo-semibold\woff\style_169898.woff" />
+    <Content Include="Code\DAL\Wall.dbml">
+      <Generator>MSLinqToSQLGenerator</Generator>
+      <LastGenOutput>Wall.designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </Content>
+    <None Include="Code\DAL\Wall.dbml.layout">
+      <DependentUpon>Wall.dbml</DependentUpon>
+    </None>
+    <None Include="Properties\PublishProfiles\FolderProfile.pubxml" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Cats.aspx" />
+    <Content Include="Default.aspx" />
+    <Content Include="Global.asax" />
+    <Content Include="Scripts\bootstrap-combobox.js" />
+    <Content Include="Scripts\bootstrap-transition.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Scripts\bootstrap.min.v4.js" />
+    <Content Include="Scripts\Decili.main.js" />
+    <Content Include="Scripts\fileinput.js" />
+    <Content Include="Scripts\fileinput_locale_fa.js" />
+    <Content Include="Scripts\fileinput_locale_LANG.js" />
+    <Content Include="Scripts\fileinput_locale_pt-BR.js" />
+    <Content Include="Scripts\fileinput_locale_zh-TW.js" />
+    <Content Include="Scripts\hoverIntent.js" />
+    <Content Include="Scripts\html5.js" />
+    <Content Include="Scripts\jquery-1.3.2.min.js" />
+    <Content Include="Scripts\jquery-1.4.4.min.js" />
+    <Content Include="Scripts\jquery-1.6.1.min.js" />
+    <Content Include="Scripts\jquery-ui.min.js" />
+    <Content Include="Scripts\jquery.anythingzoomer.min.js" />
+    <Content Include="Scripts\jquery.cycle.all.js" />
+    <Content Include="Scripts\jquery.elevatezoom.js" />
+    <Content Include="Scripts\jquery.flexslider.js" />
+    <Content Include="Scripts\jquery.jcarousel.min.js" />
+    <Content Include="Scripts\jquery.js" />
+    <Content Include="Scripts\jquery.min.js" />
+    <Content Include="Scripts\jquery.min1.7.2.js" />
+    <Content Include="Scripts\jquery.prettyPhoto.js" />
+    <Content Include="Scripts\jquery.stepper.min.js" />
+    <Content Include="Scripts\jquery.themepunch.plugins.min.js" />
+    <Content Include="Scripts\jquery.themepunch.revolution.min.js" />
+    <Content Include="Scripts\jquery.ticker.js" />
+    <Content Include="Scripts\jssor.slider.min.js" />
+    <Content Include="Scripts\jwplayer.js" />
+    <Content Include="Scripts\modal.js" />
+    <Content Include="Scripts\modernizr.js" />
+    <Content Include="Scripts\plugins\canvas-to-blob.js" />
+    <Content Include="Scripts\plugins\canvas-to-blob.min.js" />
+    <Content Include="Scripts\respond.min.js" />
+    <Content Include="Search.aspx" />
+    <Content Include="ShowWallpaper.aspx" />
+    <Content Include="Styles\bootstrap.css" />
+    <Content Include="Styles\bootstrap.min.css" />
+    <Content Include="Styles\fileinput.css" />
+    <Content Include="Styles\fileinput.min.css" />
+    <Content Include="Styles\font-awesome.min.css" />
+    <Content Include="Styles\font-awesome.min_rtl.css" />
+    <Content Include="Styles\Font\fontawesome-webfont.svg" />
+    <Content Include="Styles\Font\HelveticaNeue-Bd.svg" />
+    <Content Include="Styles\Font\HelveticaNeue-Reg.svg" />
+    <Content Include="Styles\Font\Myriad-Pro-bold.svg" />
+    <Content Include="Styles\Font\webfonts\geo-medium\svg\1110FC_0.svg" />
+    <Content Include="Styles\Font\webfonts\geo-medium\svg\svg_test.html" />
+    <Content Include="Styles\Font\webfonts\geo-regular\svg\11014B_0.svg" />
+    <Content Include="Styles\Font\webfonts\geo-regular\svg\svg_test.html" />
+    <Content Include="Styles\Font\webfonts\geo-semibold\svg\index.html" />
+    <Content Include="Styles\Font\webfonts\geo-semibold\svg\style_169898.svg" />
+    <Content Include="Styles\ie8_rtl.css" />
+    <Content Include="Styles\jquery-ui-1.8.16.custom_fa.css" />
+    <Content Include="Styles\Main.css" />
+    <Content Include="Styles\prettyPhoto.css" />
+    <Content Include="Styles\typo.css" />
+    <Content Include="UserControls\PagerToolbar.ascx" />
+    <Content Include="UserControls\PagerToolbarDynamic.ascx" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Cats.aspx.cs">
+      <DependentUpon>Cats.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Cats.aspx.designer.cs">
+      <DependentUpon>Cats.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Code\BOL\BOLWallpapers.cs" />
+    <Compile Include="Code\Common\Tools.cs" />
+    <Compile Include="Code\DAL\Wall.designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Wall.dbml</DependentUpon>
+    </Compile>
+    <Compile Include="Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Root.Master.cs">
+      <DependentUpon>Root.Master</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Root.Master.designer.cs">
+      <DependentUpon>Root.Master</DependentUpon>
+    </Compile>
+    <Compile Include="Search.aspx.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Search.aspx.designer.cs">
+      <DependentUpon>Search.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="ShowWallpaper.aspx.cs">
+      <DependentUpon>ShowWallpaper.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="ShowWallpaper.aspx.designer.cs">
+      <DependentUpon>ShowWallpaper.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="Sitemap.aspx.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="Sitemap.aspx.designer.cs">
+      <DependentUpon>Sitemap.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PagerToolbar.ascx.cs">
+      <DependentUpon>PagerToolbar.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PagerToolbar.ascx.designer.cs">
+      <DependentUpon>PagerToolbar.ascx</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\PagerToolbarDynamic.ascx.cs">
+      <DependentUpon>PagerToolbarDynamic.ascx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="UserControls\PagerToolbarDynamic.ascx.designer.cs">
+      <DependentUpon>PagerToolbarDynamic.ascx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{3259AA49-8AA1-44D3-9025-A0B520596A8C}" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>60765</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:60765/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.Net.Compilers.1.3.2\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.3\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

@@ -1,0 +1,135 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Root.master.cs" Inherits="HDWalls.Root" %>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head id="Head1" runat="server">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-4554891-29"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-4554891-29');
+</script>
+
+
+    <link rel="shortcut icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link rel="icon" href="/images/favicon.ico" type="image/x-icon" />
+    <link id="lnkMainCSS" runat="server" href="~/Styles/Main.css" media="screen" rel="stylesheet" type="text/css" />
+    <link id="lnkBootstrap" runat="server" rel="stylesheet" href="~/styles/bootstrap.css" />
+    <link runat="server" rel="stylesheet" href="~/Styles/font-awesome.min.css" />
+    <link href="Styles/typo.css" rel="stylesheet" />
+
+    <title>HD Wallpapers - Free PC HD Wallpapers,mobile HD wallpapers,tablet HD wallpapers Download</title>
+    <meta name="keywords" content="free wallpaper,HD wallpaper,wallpaper download,PC wallpaper,mobile wallpaper,iphone wallpaper,ipad wallpaper, widescreen wallpapers, android wallpaper" />
+    <meta name="description" content="Listing of thousands of HD wallpapers" />
+    <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+    <meta name="viewport" content="width=device-width" />
+    <meta id="ogTitle" property="og:title" content="" />
+    <meta id="ogType" property="og:type" content="product" />
+    <meta id="ogImage" property="og:image" content="" />
+    <meta id="ogDescription" property="og:description" content="" />
+    <meta property="og:site_name" content="HD Wallpapers" />
+    <meta id="ogURL" property="og:url" content="" />
+    <!--[if IE 8]> <link rel="stylesheet" type="text/css" href="https://www.HDWalls.net/Styles/s/settings-ie8.css"> <![endif]-->
+    <!--[if LT IE 9]><link id="IE6Minus" rel="stylesheet" type="text/css" href="https://www.HDWalls.net/Styles/ie.css" /><![endif]-->
+    <!--[if lt IE 9]>
+    <script src="https://www.HDWalls.net/Scripts/html5.js"></script>
+    <script src="https://www.HDWalls.net/Scripts/respond.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://www.HDWalls.net/Styles/ie8_rtl.css" />
+    <![endif]-->
+
+
+
+    <script>
+        function get(name) {
+            if (name = (new RegExp('[?&]' + encodeURIComponent(name) + '=([^&]*)')).exec(location.search))
+                return decodeURIComponent(name[1]);
+        }
+
+        if(get('ref') == 'pgozar')
+            window.location.href = 'http://www.robonewser.com/?ref=ppgozar'
+        else if (get('ref') == 'ip')
+            window.location.href = 'http://www.robonewser.com/?ref=iip'
+
+    </script>
+
+</head>
+<body class="offcanvas-container layout-fullwidth fs12 page-home ">
+    <form id="form1" defaultbutton="" runat="server">
+        <section id="page" class="offcanvas-pusher" role="main">
+            <section id="topbar">
+                <header class="header">
+                    <div class="container">
+                        <div class="Header1">
+                            <div class="row">
+                                <div class="col-2">
+                                    <asp:HyperLink ID="hplHome" NavigateUrl="~/" runat="server">
+                                    <div class="Logo"></div>
+                                        </asp:HyperLink>
+                                </div>
+                                <div class="col-7">
+
+                                </div>
+                                <div class="col-3">
+                                    <div class="form-inline">
+                                <div class="form-group mx-sm-3 mb-2">
+                                    <asp:TextBox runat="server" CssClass="form-control" ID="txtKeyword" placeholder="Wallpaper keyword" />
+                                </div>
+                                <asp:Button runat="server" ID="btnSearch" Text="Search" CssClass="btn btn-primary mb-2" OnClick="btnSearch_Click"></asp:Button>
+                            </div>
+                                </div>
+                            </div>
+
+                            
+                        </div>
+                    </div>
+                </header>
+            </section>
+            <div class="container">
+                <asp:ScriptManager ID="ScriptManager1" runat="server">
+                </asp:ScriptManager>
+                <div>
+                    <ul class="Cats">
+                        <asp:Repeater ID="rptCats" runat="server">
+                            <ItemTemplate>
+                                <li>
+                                    <asp:HyperLink ID="hpl" NavigateUrl='<%# "~/Cats/" + Container.DataItem.ToString().Replace(" ", "-") + "-1.html"%>' runat="server">
+                        <%# Container.DataItem.ToString() %>
+                                    </asp:HyperLink>
+                            </ItemTemplate>
+
+                        </asp:Repeater>
+                    </ul>
+                </div>
+                <asp:Panel runat="server" ID="pnlHomeWrapper">
+                    <div class="MainPage">
+                        <section>
+                            <asp:ContentPlaceHolder ID="CP1" runat="server">
+                            </asp:ContentPlaceHolder>
+                        </section>
+                        <div class="clearfix">
+                        </div>
+                    </div>
+                    <div class="clearfix">
+                    </div>
+                </asp:Panel>
+                <div class="clearfix">
+                </div>
+
+            </div>
+
+            <footer>
+                <div id="Footer">
+                    <!-- Begin WebGozar.com Counter code -->
+<script type="text/javascript" language="javascript" src="http://www.webgozar.ir/c.aspx?Code=3723434&amp;t=counter" ></script>
+<noscript><a href="http://www.webgozar.com/counter/stats.aspx?code=3723434" target="_blank">&#1570;&#1605;&#1575;&#1585;</a></noscript>
+<!-- End WebGozar.com Counter code -->
+                </div>
+            </footer>
+        </section>
+    </form>
+
+
+</body>
+</html>
